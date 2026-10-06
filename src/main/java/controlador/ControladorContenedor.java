@@ -17,7 +17,6 @@ public class ControladorContador implements ActionListener {
     public ControladorContador(VistaContador vista, OperacionNumero modelo) {
         this.vista = vista;
         this.modelo = modelo;
-        // Conectamos los botones usando los getters de tu VistaContador
         this.vista.getBtnCalcular().addActionListener(this);
         this.vista.getBtnLimpiar().addActionListener(this);
     }
@@ -32,7 +31,6 @@ public class ControladorContador implements ActionListener {
             procesarConteo();
         } else if (e.getSource() == vista.getBtnLimpiar()) {
             vista.getTxtNumero().setText("");
-            // [PERSONALIZAR]: Texto cuando se limpia la ventana
             vista.getLblResultado().setText("Cantidad de digitos: ");
             vista.getTxtNumero().requestFocus();
         }
@@ -40,19 +38,16 @@ public class ControladorContador implements ActionListener {
 
     public void procesarConteo() {
         try {
-            // [PERSONALIZAR]: Puedes cambiar los nombres de "entrada" y "numeroIngresado"
             String entrada = vista.getTxtNumero().getText().trim();
             int numeroIngresado = Integer.parseInt(entrada);
 
             modelo.setNumero(numeroIngresado);
             int totalDigitos = modelo.calcular();
 
-            // [PERSONALIZAR]: Mensaje de salida en el Label y en el JOptionPane
             vista.getLblResultado().setText("Cantidad de digitos: " + totalDigitos);
             JOptionPane.showMessageDialog(vista, modelo.obtenerReporte(), "Resultado del Conteo", JOptionPane.INFORMATION_MESSAGE);
 
         } catch (NumberFormatException ex) {
-            // [PERSONALIZAR]: Mensaje de error cuando ingresan letras o dejan vacío
             JOptionPane.showMessageDialog(vista, "Error: Ingrese un número entero válido.", "Error de entrada", JOptionPane.ERROR_MESSAGE);
         }
     }

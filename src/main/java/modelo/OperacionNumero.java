@@ -3,7 +3,6 @@ package modelo;
 /**
  * @author AM
  */
-// [PERSONALIZAR]: Puedes cambiar el nombre "OperacionNumero" por "NumeroBase" (cambiando también el nombre del archivo .java)
 public class OperacionNumero {
 
     protected int numero;
