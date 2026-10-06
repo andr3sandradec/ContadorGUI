@@ -3,27 +3,13 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package vista;
-        
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JTextField;
-import javax.swing.WindowConstants;
-import javax.swing.GroupLayout;
-import java.awt.Font;
+     
 
 /**
  *
  * @author Usuario
  */
-public class VistaContador extends JFrame {
-    
-    public JButton btnCalcular;
-    public JButton btnLimpiar;
-    private JLabel lblNumero;
-    public JLabel lblResultado;
-    private JLabel lblTitulo;
-    public JTextField txtNumero;
+public class VistaContador extends javax.swing.JFrame {
     
     /**
      * Creates new form VistaContador
@@ -33,9 +19,7 @@ public class VistaContador extends JFrame {
         this.setLocationRelativeTo(null);
     }
 
-    /**
-     * This method is called from within the constructor to initialize the form.
-     * WARNING: Do NOT 
+
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
@@ -106,38 +90,28 @@ public class VistaContador extends JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void txtNumeroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNumeroActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_txtNumeroActionPerformed
 
     private void btnLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_btnLimpiarActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ReflectiveOperationException | javax.swing.UnsupportedLookAndFeelException ex) {
-            logger.log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(() -> new VistaContador().setVisible(true));
+    public javax.swing.JButton getBtnCalcular() {
+        return btnCalcular;
     }
-
+    
+    public javax.swing.JButton getBtnLimpiar() {
+        return btnLimpiar;
+    }
+    
+    public javax.swing.JLabel getLblResultado() {
+        return lblResultado; 
+    }
+    public javax.swing.JTextField getTxtNumero() {
+        return txtNumero;
+    }
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCalcular;
     private javax.swing.JButton btnLimpiar;
